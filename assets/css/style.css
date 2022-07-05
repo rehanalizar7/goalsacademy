@@ -42,7 +42,7 @@ h6 {
 } */
 .bg-transparant {
   background-image: url('../img/bg-new-2.png');
-  background-size: cover;
+  background-size: contain;
 }
 
 /*--------------------------------------------------------------
@@ -272,8 +272,9 @@ section {
 }
 .navbar .getlogin:hover,
 .navbar .getlogin:focus:hover {
-  color: #097dd3;
-  background: #ffff;
+  /* color: #ff8955; */
+  color: #ffff;
+  background: #ff8955;
 }
 
 /* ==========END============ */
@@ -708,44 +709,57 @@ section {
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  margin-left: 2%;
+  margin-top: 8%;
+  margin-left: 2.5%;
   align-items: center;
   width: 95%;
-  height: 100VH;
-  background: url(../img/bg-new-1.png) top center no-repeat ;
+  height: 95%;
+  /* width: 1240px;
+  height: 585px; */
+  background: url(../img/bg-new-new.png) top center no-repeat ;
+  /* background-size: auto; */
   background-size: cover;
-  border-radius: 0px 0px 180px 9px;
+  border-radius: 0px 0px 180px 19px;
 }
 .hero h1 {
-  margin: 20px;
+  margin-top: -180px;
+  margin-left: -50px;
   font-size: 45px;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 2px;
 }
 .hero h2 {
+  padding-top: 15px;
   color: #fff;
-  margin: 15px 0 0 0;
+  margin-left: -50px;
+  margin-right: -90px;
+  /* margin: 15px 0 0 0; */
   font-size: 17px;
+  font-style: 'Poppins';
+  font-weight: 200;
+  letter-spacing: 1.6px;
+  line-height: 25.5px;
 }
 .hero .btn-video {
-  margin-top: 30px;
-  line-height: 0;
-  /* padding: 25px 40px; */
-  /* border-radius: 9px; */
+  margin-left: -50px;
+  line-height: 60px;
   transition: 0.5s;
   color: #fff;
   /* background: #FF8854; */
   /* box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4); */
 }
 .hero .btn-video span {
+  /* margin-top: 15px; */
+  margin-left: auto;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
   text-decoration: underline;
 }
 .hero .btn-get-started {
+  margin-left: -50px;
   margin-top: 30px;
   line-height: 0;
   padding: 25px 40px;
@@ -770,8 +784,12 @@ section {
   transform: translateX(5px);
 }
 .hero .hero-img {
-  text-align: right;
-  align-items: flex-end;
+  /* padding-left: 500px; */
+  padding: 0px 0px 0px 150px;
+  margin-left: -70px;
+  margin-right: -80px;
+  width: 700px;
+  height: auto;
 }
 .herosatu {
   /* background-color: #097bd3ab; */
@@ -781,13 +799,18 @@ section {
 }
 @media (min-width: 1024px) {
   .hero {
-    background-attachment: fixed;
+    height: auto;
+    background-attachment: scroll;
+    padding-top: 100px;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 991px) {
   .hero {
     height: auto;
+    width: auto;
     padding: 120px 0 60px 0;
+    background-size: cover;
   }
   .hero .hero-img {
     text-align: center;
@@ -802,14 +825,65 @@ section {
     text-align: center;
   }
   .hero h1 {
-    font-size: 32px;
+    /* padding-top: 100px;
+    padding-left: 60px; */
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
   }
   .hero h2 {
-    font-size: 24px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px  ;
+    font-size: 17px;
   }
   .hero .hero-img img {
-    width: 100%;
-    margin-top: -60px;
+    align-items: center;
+    width: 800px;
+    height: auto;
+    margin-left: 0px;
+    margin-top: -160px;
+  }
+  .hero .btn-video {
+    margin-top: 30px;
+    margin-left: -0px;
+    line-height: 60px;
+    /* padding: 25px 40px; */
+    /* border-radius: 9px; */
+    transition: 0.5s;
+    color: #fff;
+    /* background: #FF8854; */
+    /* box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4); */
+  }
+  .hero .btn-video span {
+    text-align: center;
+    margin: auto;
+    margin-left: -0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+  }
+  .hero .btn-get-started {
+    /* margin-left: -50px; */
+    margin-top: 30px;
+    margin-left: auto;
+    /* margin: auto; */
+    text-align: center;
+    line-height: 0;
+    padding: 25px 40px;
+    border-radius: 9px;
+    transition: 0.5s;
+    color: #fff;
+    background: #FF8854;
+    box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+  }
+  .hero .btn-get-started span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
   }
 }
 
