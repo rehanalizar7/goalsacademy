@@ -1000,7 +1000,63 @@ section {
 
 /*--------------------------------------------------------------
 
-# About --------------------------------------------------------------*/
+
+# AboutPromo --------------------------------------------------------------*/
+.gambarabout {
+  width: 350px;
+}
+.aboutPromo .content {
+  align-items: center;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 20px;
+}
+.aboutPromo h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #097dd3;
+  text-transform: uppercase;
+}
+.aboutPromo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #012970;
+}
+.aboutPromo p {
+  margin: 15px 0 30px 0;
+  line-height: 24px;
+}
+.aboutPromo .btn-read-more {
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #097dd3;
+  box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+}
+.aboutPromo .btn-read-more span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.aboutPromo .btn-read-more i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.aboutPromo .btn-read-more:hover i {
+  transform: translateX(5px);
+}
+@media (max-width: 1306px) {
+  .aboutPromo {
+    padding: 20px;
+  }
+}
+
+
+/* # About --------------------------------------------------------------*/
 .gambarabout {
   width: 350px;
 }
@@ -2632,4 +2688,38 @@ section {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+transform: translateX(0);
 }

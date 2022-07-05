@@ -227,6 +227,73 @@
 
 
       <main id="main">
+        <!-- ======= Promo Section ======= -->
+        <section id="aboutPromo" class="aboutPromo">
+          <div class="container" data-aos="fade-up">
+            <div class="row gx-0">
+              <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="content">
+                  <!-- <h3>Yuk berselancar dengan goals academy</h3>
+                  <h2>Goals academy dengan teknik jitu yang dimiliki untuk mencetak pelajar sebagai pemimpin masa depan.
+                  </h2>
+                  <p>Edukasi berbasis teknologi inovatif dengan tenaga pendidik profesional.</p> -->
+                  <div class="row mx-auto my-auto justify-content-center">
+                    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                          <div class="col-md-3">
+                            <div class="card">
+                              <div class="card-img">
+                                <img src="../main/assets/img/promo/1.png" class="img-fluid">
+                              </div>
+                              <div class="card-img-overlay">Slide 1</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class="col-md-3">
+                            <div class="card">
+                              <div class="card-img">
+                                <img src="../main/assets/img/promo/3.png" class="img-fluid">
+                              </div>
+                              <div class="card-img-overlay">Slide 2</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class="col-md-3">
+                            <div class="card">
+                              <div class="card-img">
+                                <img src="../main/assets/img/promo/3.png" class="img-fluid">
+                              </div>
+                              <div class="card-img-overlay">Slide 3</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      </a>
+                      <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      </a>
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Promo Section -->
+
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
           <div class="container" data-aos="fade-up">
@@ -901,6 +968,24 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script>
+    let items = document.querySelectorAll('.carousel .carousel-item')
+
+    items.forEach((el) => {
+      const minPerSlide = 4
+      let next = el.nextElementSibling
+      for (var i = 1; i < minPerSlide; i++) {
+        if (!next) {
+          // wrap carousel by using first child
+          next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+      }
+    })
+
+  </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
